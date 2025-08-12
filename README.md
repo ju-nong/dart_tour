@@ -153,3 +153,27 @@
 
 	print(numbers);		// {1, 2, 3, 4}
 	```
+
+## 3. Functions
+
+- 3.0 Defining a Function
+	`Dart`에서 함수를 정의하는 방법은 일반적인 프로그래밍 언어의 형식과 동일하다
+	특징이라면 바로 `return`을 해주는 함수 같은 경우는 또 다른 문법도 지원해주는 것이다
+	```dart
+	// basic
+	String getIntroduce(String name){
+		return "Hello $name nice to meet you!";
+	}
+
+	// fat arrow
+	String getIntroduce(String name) => "Hello $name nice to meet you!";
+
+	void sayHello(String name) {
+		print(getIntroduce(name));
+	}
+
+	void main() {
+		sayHello("이준용");		// Hello 이준용 nice to meet you!
+	}
+
+	```

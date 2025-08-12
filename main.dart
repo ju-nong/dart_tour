@@ -1,11 +1,13 @@
+// String getIntroduce(String name){
+//   return "Hello $name nice to meet you!";
+// }
+
+String getIntroduce(String name) => "Hello $name nice to meet you!";
+
+void sayHello(String name) {
+  print(getIntroduce(name));
+}
+
 void main() {
-  // var numbers = {1, 2, 3, 4};
-  Set<int> numbers = {1, 2, 3, 4};
-
-  numbers.add(1);
-  numbers.add(1);
-  numbers.add(1);
-  numbers.add(1);
-
-  print(numbers);
+  sayHello("이준용");
 }
