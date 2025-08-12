@@ -110,9 +110,17 @@
 	var age = 25;
 
 	// 단일 변수 사용
-	print("안녕하세요 제 이름은 $name입니다");
+	print("안녕하세요 제 이름은 $name입니다");		// 안녕하세요 제 이름은 이준용입니다
 
 	// 계산 표현식 사용
-	print("안녕하세요 제 이름은 ${name}입니다");
-	print("제 나이는 만으로 ${age - 2}입니다");
+	print("안녕하세요 제 이름은 ${name}입니다");	// 안녕하세요 제 이름은 이준용입니다
+	print("제 나이는 만으로 ${age - 2}살입니다");		// 제 나이는 만으로 23살입니다
+	```
+- 2.3 Collection For
+	`Collection` 변수에 값을 초기화할 때 반복문을 이용해서 요소를 결정할 수 있는 문법이다
+	```Dart
+	var newFriends = ["장윤아", "모카"];
+  	var oldFriends = ["이준용", "오아리", for (var friend in newFriends) "❤ $friend"];
+
+  	print(oldFriends);		// [이준용, 오아리, ❤ 장윤아, ❤ 모카]
 	```
