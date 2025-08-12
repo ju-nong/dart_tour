@@ -1,6 +1,11 @@
 void main() {
-  var newFriends = ["장윤아", "모카"];
-  var oldFriends = ["이준용", "오아리", for (var friend in newFriends) "❤ $friend"];
+  // var player = {"name": "이준용", "xp": 19.999, "superpower": false};
 
-  print(oldFriends);
+  Map<String, Object> player = {
+    "name": "이준용",
+    "xp": 19.999,
+    "superpower": false,
+  };
+
+  print(player);
 }

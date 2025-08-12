@@ -124,3 +124,16 @@
 
   	print(oldFriends);		// [이준용, 오아리, ❤ 장윤아, ❤ 모카]
 	```
+- 2.4 Maps
+	`Javascript`에 `Object`나 `Python`에 `Dictionary`와 같은 `key`와 `value`로 이루어진 데이터 타입이다
+	```Dart
+	// var
+	var player = {"name": "이준용", "xp": 19.999, "superpower": false};
+
+	// type
+  	Map<String, Object> player = {
+	    "name": "이준용",
+	    "xp": 19.999,
+	    "superpower": false,
+  	};
+	```
