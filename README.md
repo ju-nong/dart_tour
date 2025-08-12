@@ -71,5 +71,48 @@
     `final`로 선언한 상수가 런타임 상수였다면, `const`로 선언한 상수는 리터럴 값을 갖는 컴파일 상수이다.
     ```dart
     const APP_NAME = "Dart tour APP";
-    const API_KEY = "ILO_VEY_OU"
+    const API_KEY = "ILO_VEY_OU";
     ```
+
+## 2. Data types
+
+-   2.0 Basic Data Types
+    주로 쓰이는 원시형 데이터 타입에 대해 공부 했다
+
+    ```dart
+    void main() {
+    	String name = "nico";
+    	bool alive = true;
+
+    	int age = 12;
+    	double money = 69.99;
+
+    	// int나 double의 부모 클래스인 num을 사용하면 이런식으로도 가능하다
+    	num x = 10;
+    	x = 1.1;
+    }
+    ```
+- 2.1 Lists
+	많이 쓰이는 배열 타입을 공부 했다
+	추가로 `Colletction If`문도 알게 되었다
+	```dart
+	var numbers = [1, 2, 3, 4, 5];
+	List<String> names = ["이준용", "오아리", "모카"];
+
+	// collection if
+	var hateThreeList = [1, 2, if(false) 3, 4];
+	print(hateThreeList);		// [1, 2, 4]
+	```
+- 2.2 String Interpolation
+	`Dart`에서 문자열 안에 변수나 계산식을 표현하는 방식이다
+	```Dart
+	var name = "이준용";
+	var age = 25;
+
+	// 단일 변수 사용
+	print("안녕하세요 제 이름은 $name입니다");
+
+	// 계산 표현식 사용
+	print("안녕하세요 제 이름은 ${name}입니다");
+	print("제 나이는 만으로 ${age - 2}입니다");
+	```
