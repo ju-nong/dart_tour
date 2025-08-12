@@ -132,9 +132,9 @@
 
 	// type
   	Map<String, Object> player = {
-	    "name": "이준용",
-	    "xp": 19.999,
-	    "superpower": false,
+		"name": "이준용",
+		"xp": 19.999,
+		"superpower": false,
   	};
 	```
 - 2.5 Sets
@@ -177,3 +177,21 @@
 	}
 
 	```
+- 3.1 Named Parameters
+	`Dart`에서는 함수에 쓰이는 매개변수에 `null`값 방지와 기본값을 정의할 수 있는 문법이 있다
+	`null`값 방지는 앞에 `required` 키워드를 붙여준다
+	기본값은 변수값 초기화 시키듯이 하면 된다
+	```dart
+	String sayHello({
+		String name = "홍길동",
+		required int age,
+		String country = "South Korea",
+	}) {
+		return "Hello $name, you are $age, and you come from $country";
+	}
+
+	void main() {
+		print(sayHello(name: "이준용", age: 25));	// Hello 이준용, you are 25, and you come from South Korea
+	}
+	```
+	함수를 사용할 때는 앞에 `변수명:`을 붙여서 인수를 전달해주면 된다

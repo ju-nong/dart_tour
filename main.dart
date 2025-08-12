@@ -1,13 +1,11 @@
-// String getIntroduce(String name){
-//   return "Hello $name nice to meet you!";
-// }
-
-String getIntroduce(String name) => "Hello $name nice to meet you!";
-
-void sayHello(String name) {
-  print(getIntroduce(name));
+String sayHello({
+  String name = "홍길동",
+  required int age,
+  String country = "South Korea",
+}) {
+  return "Hello $name, you are $age, and you come from $country";
 }
 
 void main() {
-  sayHello("이준용");
+  print(sayHello(name: "이준용", age: 25));
 }
