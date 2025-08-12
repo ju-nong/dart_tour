@@ -1,11 +1,11 @@
 void main() {
-  // var player = {"name": "이준용", "xp": 19.999, "superpower": false};
+  // var numbers = {1, 2, 3, 4};
+  Set<int> numbers = {1, 2, 3, 4};
 
-  Map<String, Object> player = {
-    "name": "이준용",
-    "xp": 19.999,
-    "superpower": false,
-  };
+  numbers.add(1);
+  numbers.add(1);
+  numbers.add(1);
+  numbers.add(1);
 
-  print(player);
+  print(numbers);
 }

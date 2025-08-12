@@ -137,3 +137,19 @@
 	    "superpower": false,
   	};
 	```
+- 2.5 Sets
+	순서가 있지만 각 요소가 유니크한 값을 가지는 데이터 타입니다
+	```Dart
+	// var
+	var numbers = {1, 2, 3, 4};
+
+	// type
+	Set<int> numbers = {1, 2, 3, 4};
+
+	numbers.add(1);	
+	numbers.add(1);
+	numbers.add(1);
+	numbers.add(1);
+
+	print(numbers);		// {1, 2, 3, 4}
+	```
