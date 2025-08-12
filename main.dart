@@ -1,11 +1,12 @@
-String sayHello({
-  String name = "홍길동",
-  required int age,
-  String country = "South Korea",
-}) {
-  return "Hello $name, you are $age, and you come from $country";
+typedef ListOfInts = List<int>;
+
+List<int> reverseListOfNumbers(List<int> list) {
+  var reversed = list.reversed;
+  print(reversed);
+  print(reversed.toList());
+  return reversed.toList();
 }
 
 void main() {
-  print(sayHello(name: "이준용", age: 25));
+  reverseListOfNumbers([1, 2, 3, 4]);
 }

@@ -179,8 +179,9 @@
 	```
 - 3.1 Named Parameters
 	`Dart`에서는 함수에 쓰이는 매개변수에 `null`값 방지와 기본값을 정의할 수 있는 문법이 있다
-	`null`값 방지는 앞에 `required` 키워드를 붙여준다
-	기본값은 변수값 초기화 시키듯이 하면 된다
+	아래는 `Named Parameters`문법을 사용해서 `null`값 방지와 기본값을 정의하는 방법이다
+	변수명 앞에 `required` 키워드를 붙여주면 `null`값 방지가 되고, 기본값은 변수에 값 초기화 시키듯이 하면 된다
+	해당 문법으로 정의된 함수를 호출할 때는 인수 앞에 정의된 매개변수명을 붙여주면 된다
 	```dart
 	String sayHello({
 		String name = "홍길동",
@@ -194,4 +195,46 @@
 		print(sayHello(name: "이준용", age: 25));	// Hello 이준용, you are 25, and you come from South Korea
 	}
 	```
-	함수를 사용할 때는 앞에 `변수명:`을 붙여서 인수를 전달해주면 된다
+- 3.2 Optional Positional Parameters
+	일반적인 함수 매개변수 정의 문법은 순서대로 받는 형태인 `Positional Parameters`문법이다
+	아래는 해당 문법에서도 기본값을 정의할 수 있는 방법이다
+	```dart
+	String sayHello(String name, int age, [String? country = "South Korea"]) => "Hello $name, you are $age, years old from $country";
+
+	void main() {
+		print(sayHello("이준용", 25));
+	}
+
+	```
+- 3.4 QQ Operator
+	`null`과 관련된 연산자 두 개를 배웠다
+	`??` 연산자는 앞에 오는 값이 `null`일 경우 뒤에 오는 값으로 대체 해준다
+	`?=` 연산자는 앞에 오는 변수값이 `null`일 경우 뒤에 오는 값을 대입 해준다
+	```dart
+	String capitalizeName(String? name) => name?.toUpperCase() ?? "ANON";
+
+	void main() {
+		print(capitalizeName("oari"));		// OARI
+		print(capitalizeName(null));		// ANON
+
+		String? name;
+		name ??= "이준용";		// 이준용 대입
+		name ??= "오아리";		// null이 아니기 때문에 대입 안됨
+
+		print(name);		// 이준용
+	}
+	```
+- 3.5 Typedef
+	`typedef`문을 사용하면 원하는 타입에 별명을 붙일 수 있다
+	```dart
+	typedef ListOfInts = List<int>;
+
+	ListOfInts reverseListOfNumbers(ListOfInts list) {
+		var reversed = list.reversed;
+		return reversed.toList();
+	}
+
+	void main() {
+		print(reverseListOfNumbers([1, 2, 3, 4]));
+	}
+	```
