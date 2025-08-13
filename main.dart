@@ -1,12 +1,27 @@
-typedef ListOfInts = List<int>;
+enum Team { blue, red }
 
-List<int> reverseListOfNumbers(List<int> list) {
-  var reversed = list.reversed;
-  print(reversed);
-  print(reversed.toList());
-  return reversed.toList();
+mixin Strong {
+  final double strengthLevel = 1500.99;
+}
+
+mixin QuickRunner {
+  void runQuick() {
+    print("ruuuuuuuun!");
+  }
+}
+
+mixin Tall {
+  final double height = 1.99;
+}
+
+class Player with Strong, QuickRunner, Tall {
+  final Team team;
+
+  Player({required this.team});
 }
 
 void main() {
-  reverseListOfNumbers([1, 2, 3, 4]);
+  var player = Player(team: Team.red);
+
+  player.runQuick();
 }
